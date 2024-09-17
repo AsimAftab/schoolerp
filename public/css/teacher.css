@@ -1,0 +1,171 @@
+/* General Boilerplate and Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Teacher Section */
+.teacher-section {
+    padding: 20px;
+}
+.teacher-section .firstrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.add-teacher-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-teacher-btn:hover {
+    background-color: #0056b3;
+}
+
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.teacher-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.teacher-card h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Modal for Adding Teachers */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Prevents the form from being cut off */
+}
+
+.modal-content h2{
+    margin-bottom: 1rem;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 2% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Adjust for wider form */
+    scrollbar-width: none;
+}
+.firstrow{
+    display: flex;
+    gap: 1rem;
+}
+.firstrow .form-group{
+    width: 50%;
+}
+.subjectrow{
+    display: flex;
+    gap: 0.4rem;
+}
+.subjectrow .sub-left{
+    width: 90%;
+}
+.subjectrow .sub-right{
+    width: 15%;
+    margin-top: 1.5rem;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Ensure modal content doesn't exceed screen height */
+.modal-content {
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+/* Style for the buttons */
+ #addSubjectBtn{
+    background-color: #7d8893; /* Primary blue color */
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect to make the button interactive */
+#addSubjectBtn:hover{
+    background-color: #5a6570; /* Darker shade of blue */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Button click effect (active state) */
+#addSubjectBtn:active{
+    background-color: #004085; /* Even darker shade on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+}
+
+#addSubjectBtn {
+    width: 100%;
+}
+
